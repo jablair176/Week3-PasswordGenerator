@@ -20,19 +20,19 @@ function promptChoices(){
     return false;
   }
 
-  if(comfirm("Select 'OK' to add Lowercase Letters or 'Cancel' to skip")) {
+  if(confirm("Select 'OK' to add Lowercase Letters or 'Cancel' to skip")) {
     choiceArr = choiceArr.concat(lowerCaseArr);
   }
 
-  if(comfirm("Select 'OK' to add Uppercase Letters or 'Cancel' to skip")) {
+  if(confirm("Select 'OK' to add Uppercase Letters or 'Cancel' to skip")) {
     choiceArr = choiceArr.concat(upperCaseArr);
   }
   
-  if(comfirm("Select 'OK' to add Numbers or 'Cancel' to skip")) {
+  if(confirm("Select 'OK' to add Numbers or 'Cancel' to skip")) {
     choiceArr = choiceArr.concat(numberArr);
   }
   
-  if(comfirm("Select 'OK' to add Special Characters or 'Cancel' to skip")) {
+  if(confirm("Select 'OK' to add Special Characters or 'Cancel' to skip")) {
     choiceArr = choiceArr.concat(specialCharArr);
   }
 
@@ -52,13 +52,15 @@ function generatePassword() {
   return password;
 }
 
-// Write password to the #password input
+// Write prompt choice generated password to the #password input
 function writePassword() {
-  var password = generatePassword();
+  var recievedPrompts = promptChoices();
   var passwordText = document.querySelector("#password");
+  if(recievedPrompts) {
 
-  passwordText.value = password;
-
+  var generatedPassword = generatePassword();
+  passwordText.value = generatedPassword;
+  }
 }
 
 // Add event listener to generate button
