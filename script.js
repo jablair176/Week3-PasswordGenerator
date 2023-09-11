@@ -39,7 +39,6 @@ function promptChoices(){
   return true;
 }
 
-
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
