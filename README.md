@@ -6,7 +6,7 @@
 - After answering prompts, newly generated password is displayed
 
 ## Usage
-- Password Generator ![passwordGenerator](/Users/josephblair/bootcamp/week3-challenge/Week3-PasswordGenerator-Repo/images/screenshot:psswrdGen.png)
+- Password Generator ![passwordGenerator](images/screenshot:psswrdGen.png)
 - click red Generate Password button
 - select length of password when prompted (between 8 and 128 characters)
 - select "OK" to select or "Cancel" to skip prompts to select if you want uppercase, lowercase, numbers, or special characters in your password
