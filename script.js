@@ -10,6 +10,35 @@ var numberArr = number.split(" ");
 
 var specialCharArr = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '_', '=', '+', '[', '{', ']', '}', ',', '<', '.', '>', '/', '?',];
 
+// Prompt choices function
+function promptChoices(){
+  choiceArr = [];
+  charLength = parseInt(prompt("Choose a password length of at least 8 characters and no more than 128 characters"));
+
+  if(isNaN(charLength) || charLength < 8 || charLength > 128) {
+    alert("Must choose between 8 and 128 characters");
+    return false;
+  }
+
+  if(comfirm("Select 'OK' to add Lowercase Letters or 'Cancel' to skip")) {
+    choiceArr = choiceArr.concat(lowerCaseArr);
+  }
+
+  if(comfirm("Select 'OK' to add Uppercase Letters or 'Cancel' to skip")) {
+    choiceArr = choiceArr.concat(upperCaseArr);
+  }
+  
+  if(comfirm("Select 'OK' to add Numbers or 'Cancel' to skip")) {
+    choiceArr = choiceArr.concat(numberArr);
+  }
+  
+  if(comfirm("Select 'OK' to add Special Characters or 'Cancel' to skip")) {
+    choiceArr = choiceArr.concat(specialCharArr);
+  }
+
+  return true;
+}
+
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
