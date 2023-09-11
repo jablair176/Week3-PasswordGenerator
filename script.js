@@ -42,6 +42,16 @@ function promptChoices(){
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+// Generate password from prompt choices
+function generatePassword() {
+  var password = "";
+  for(var i = 0; i < charLength; i++) {
+    var randomised = Math.floor(Math.random() * choiceArr.length);
+    password = password + choiceArr[randomised];
+  }
+  return password;
+}
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
